@@ -2,6 +2,14 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	/*2.1 - Ara ha canviat el background al especificat a continuació. De manera que tots els elements fills heredaran el bg color (es pot sobreescriure)*/
+	background-color: rgb(246, 203, 255)
+}
+
+/*2.1 Afegim subrallat a les capçaleres de primer nivell*/
+h1 {
+	text-decoration: underline;
 }
 
 body {
@@ -11,13 +19,38 @@ body {
 }
 
 .contenedor {
-	background: #550a46;
+	/*3.1*/
+	font-size: 20px;
+	background: rgb(102, 169, 236);
 	color: #fff;
 	width: 90%;
 	max-width: 800px;
 	margin: 29.92px auto;
 	padding: 29.92px;
+	/*3 Fent Alt+Z */
+	/* margin: 29.92em auto;
+	padding: 29.92em; 
+	font-size: 1.25rem;
+	background: rgb(102, 169, 236);
+	color: #fff;
+	width: 90%;
+	max-width: 50rem;
+	margin: 1.87rem auto;
+	padding: 1.87rem;
+	*/
+
+	/*3.1 */
+	/* width: 100pt;
+	height: 30vw;
+
+	width: 50vw;
+	height: 200pt; */
+
 	border-radius: 10px;
+}
+
+.contenedor2 {
+	background-color: rgb(102, 169, 236);
 }
 
 .contenedor h1 {
@@ -49,4 +82,50 @@ body {
 .tabledefault {
 	background-color: #f8b400;
 	border: 1px solid #000;
+}
+
+/*2.1 Afegim estils a les files i les cel·les de la taula*/
+th,
+td {
+	border: 1px solid pink;
+	background-color: #617be3;
+}
+
+
+/*2.2*/
+
+/*A tots els tr(files) i els th(capçaleres) els hi aplica aquest estil*/
+tr,
+th {
+
+	text-decoration: underline;
+
+}
+
+/*2.2*/
+
+/*Només s'aplica el estil als elements th (capçaleres) en qualsevol nivell de descendència dins dels elements tr (files)*/
+tr th {
+
+	text-decoration: underline;
+
+}
+
+/*2.3*/
+
+/* S'aplica els estils a tots els <a> en qualsevol nivell de descendència dins dels pàrrafs */
+p a {
+	color: red;
+}
+
+/* S'aplica els estils a tots els <a> que es trobin en el segon nivell de descendència dins dels pàrrafs */
+/* p * a {
+	color: red;
+} */
+
+
+/*2.4*/
+/*No s'aplica aquest estil perquè els enllaços (<a>) no són germans dels pàrrafs (no es troben en el mateix nivell)*/
+p~p {
+	color: orange;
 }
